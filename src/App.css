@@ -1,0 +1,121 @@
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.results-map {
+  width: 100%;
+  height: 100vh;
+}
+
+.results-pane {
+  width: 420px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border: 10px solid #eee;
+}
+
+.results-pane header {
+  background: #eee;
+  padding: 0 0 12px 17px;
+}
+
+.results-pane header h1 {
+  font-size: 1.25em;
+  margin-top: 0;
+}
+
+.filter-controls select {
+  margin-left: 7px;
+  font-size: 1em;
+}
+
+.results-pane main {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.results-container {
+  height: 100%;
+}
+
+.results-list {
+  width: 100%;
+  margin: 0;
+  padding: 5px;
+}
+
+.result-item {
+  display: block;
+  text-align: left;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  background: white;
+  border: none;
+  cursor: pointer;
+}
+
+.result-name {
+  font-size: 1em;
+  margin: 0.4em 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 420px;
+}
+
+.result-item .result-name {
+  font-weight: normal;
+}
+
+.result-details {
+  margin: 0.4em 0;
+  font-size: 0.85em;
+}
+
+.result-item .result-details {
+  color: #666;
+}
+
+.result-item.opened {
+  background: rgb(155, 186, 209); 
+}
+
+.result-info-window {
+  font-size: 16px;
+}
+
+.results-pane footer {
+  color: #777;
+  background-color: #eee;
+  font-size: 0.8em;
+  padding: 10px 0 0 15px;
+}
+
+.error-message {
+  margin: 15px;
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 900px) {
+  .app {
+    flex-direction: column;
+  }
+  .results-pane {
+    width: 100%;
+    height: 50vh;
+  }
+  .results-map {
+    height: 50vh;
+  }
+  .result-info-window .result-name {
+    max-width: 270px;
+  }
+  .result-info-window .result-details {
+    max-width: 270px;
+  }
+}
